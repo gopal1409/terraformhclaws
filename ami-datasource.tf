@@ -1,7 +1,7 @@
 #we will get the latest ami for amazon linux2 os
 data "aws_ami" "amzlinux2" {
     most_recent = true
-    owner = ["amazon"]
+    owners = ["amazon"]
     filter {
         name = "name"
         values = ["amzn2-ami-hvm*-gp2"]
