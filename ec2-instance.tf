@@ -22,4 +22,7 @@ provider "aws" {
 resource "aws_instance" "ec2demo" {
     ami = 
     instance_type = "t2.micro"
+    tags = {
+        "Name" = "gopa-instance"
+    }
 }
