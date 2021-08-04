@@ -1,3 +1,4 @@
+#template
 #terraform setting block
 terraform {
   required_providers {
@@ -18,10 +19,12 @@ provider "aws" {
 
 
 #resource block
-
-resource "aws_instance" "ec2demo" {
-    ami = 
+         #(block type) (block lable)
+Block->resource "aws_instance" "ec2demo" {
+    #-> block inside blocks
+    ami =  //
     instance_type = "t2.micro"
+    #identifier = expression #argument
     tags = {
         "Name" = "gopa-instance"
     }
