@@ -1,13 +1,13 @@
 variable "aws_region" {
     description = "Region in which aws resource to be created"
     type = string
-    default = "us-west-2"
+    default = "eu-central-1"
   
 }
 
 variable "instance_type" {
     description = "modify the instance type"
     type = string
-    default = "t3.micro"
+    default = "t3a.micro"
   
 }
