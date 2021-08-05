@@ -28,7 +28,7 @@ data "aws_ec2_instance_type_offering" "my_inst_type" {
 output "output_v3_1" {
     value = keys({for az, details in data.aws_ec2_instance_type_offering.my_inst_type:
          az => details.instance_type if length(details.instance_type)!=0})
-    }
+    
 
 }
 
