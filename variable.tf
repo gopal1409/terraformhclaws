@@ -8,6 +8,6 @@ variable "aws_region" {
 variable "instance_type" {
     description = "modify the instance type"
     type = string
-    default = "t2.micro"
+    default = "t3.micro"
   
 }
