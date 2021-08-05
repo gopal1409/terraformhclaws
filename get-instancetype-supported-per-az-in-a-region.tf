@@ -34,6 +34,7 @@ output "output_v3_1" {
 
 #output=2
 #we are going to see which az are not supporting the instance type
+#filter output: and providing a list which will get the first item from the list. 
 output "output_v3_2" {
     value = keys( {
         for az, details in data.aws_ec2_instance_type_offering.my_inst_type:
