@@ -17,7 +17,7 @@ data "aws_ec2_instance_type_offering" "my_inst_type" {
   }
   filter {
     name = "location"
-    values = each.key
+    values = [each.key]
   }
   location_type = "availability-zone"
 }
@@ -31,6 +31,7 @@ output "output_v3_1" {
 
 }
 
+#output=2
 #we are going to see which az are not supporting the instance type
 output "output_v3_2" {
     value = {
