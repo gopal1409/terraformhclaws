@@ -11,10 +11,11 @@ data "aws_availability_zones" "my_zones"{
 #get the list of az in a particular region where that respective instance type of supported. 
 #datasource-2
 data "aws_ec2_instance_type_offering" "my_inst_type" {
+  for_each = toset(data.aws_availability_zones.my_zones.names)
   filter {
     name   = "instance-type"
     values = ["t2.micro"]
-  }
+  }  
   filter {
     name = "location"
     values = [each.key]
