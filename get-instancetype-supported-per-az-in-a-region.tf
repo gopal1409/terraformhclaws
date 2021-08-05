@@ -14,7 +14,7 @@ data "aws_ec2_instance_type_offering" "my_inst_type" {
   for_each = toset(data.aws_availability_zones.my_zones.names)
   filter {
     name   = "instance-type"
-    values = ["t3.micro"]
+    values = ["t4g.micro"]
   }  
   filter {
     name = "location"
