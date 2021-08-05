@@ -36,8 +36,7 @@ output "output_v3_1" {
 #we are going to see which az are not supporting the instance type
 output "output_v3_2" {
     value = {
-        for az, details in data.aws_ec2_instance_type_offering.my_inst_type: az => details.instance_type if length(details.instance_type)!=0
-        }
+        for az, details in data.aws_ec2_instance_type_offering.my_inst_type: az => details.instance_type if length(details.instance_type)!=0}
   
 }
 
