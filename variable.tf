@@ -5,7 +5,7 @@ variable "aws_region" {
   
 }
 
-variable "aws_instance" {
+variable "instance_type" {
     description = "modify the instance type"
     type = string
     default = "t2.micro"
