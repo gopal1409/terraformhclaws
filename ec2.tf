@@ -1,3 +1,4 @@
+#avaialbility zone datasource
 data "aws_availability_zones" "my_zones"{
     filter {
         name = "opt-in-status"
@@ -13,7 +14,7 @@ resource "aws_instance" "ec2demo" {
     #identifier = expression #argument
     #this will create ec2 instance in all az
     for_each = toset(data.aws_availability_zones.my_zones.names)
-    availability_zone = each.key
+    availability_zone = each.key #each value list of items each.key==each.value. 
     tags = {
         "Name" = "gopal-demo-${each.value}"
     }
