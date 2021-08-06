@@ -7,8 +7,8 @@ terraform {
   }
   backend "s3" {
     bucket = "terraform-state-gopal"
-    key = dev/terraform.tfstate
-    region = ap-northeast-2
+    key = "dev/terraform.tfstate"
+    region = "ap-northeast-2"
   }
 }
 #provider block
