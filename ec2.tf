@@ -11,6 +11,6 @@ resource "aws_instance" "ec2demo" {
   #  az => details.instance_type if length(details.instance_type)!=0 }))
    # availability_zone = each.key #each value list of items each.key==each.value. 
     tags = {
-        "Name" = "gopal-demo-${each.value}"
+        "Name" = "gopal-demo"
     }
 }
